@@ -10,12 +10,12 @@ public class Main {
 
             if (numbers[i] > 0) {
                 System.out.println(numbers[i]);
-
-            } else if (numbers[i] == 0) {
+            } else {
                 break;
             }
         }
     }
 }
+
 
 
