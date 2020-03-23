@@ -2,7 +2,13 @@ package learn.programming;
 
 
 enum Days {
-    PIEKTDIENA
+    PIRMDIENA,
+    OTRDIENA,
+    TRESDIENA,
+    CETURTDIENA,
+    PIEKTDIENA,
+    SESTDIENA,
+    SVETDIENA
 }
 
 public class Main {
