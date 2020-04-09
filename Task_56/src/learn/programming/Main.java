@@ -17,10 +17,11 @@ public class Main {
 
             System.out.println("Please enter a word: ");
             input = sc.nextLine();
+            input = input.replaceAll("\\s+","");
 
             if (input.equals("")) {
                 System.out.println("Nothing has been entered");
-            } else {
+            } else if (input.matches("\\p{IsAlphabetic}+")) {
                 words.add(input);
 
                 System.out.println("\nPress any key to continue \nPress N to exit");
@@ -37,6 +38,8 @@ public class Main {
                         break;
                     }
                 }
+            } else {
+                System.out.println("Invalid input. The word must contain only letters.");
             }
         }
     }
