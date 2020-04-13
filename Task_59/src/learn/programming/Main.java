@@ -13,20 +13,20 @@ public class Main {
         Ingredient water = new Ingredient("water");
         Ingredient milk = new Ingredient("milk");
 
-        List<Ingredient> listStockIngredients = new ArrayList<>();
-        //listStockIngredients.add(salt);
-        listStockIngredients.add(egg);
-        listStockIngredients.add(bacon);
-        listStockIngredients.add(water);
-        listStockIngredients.add(milk);
+        List<Ingredient> stockIngredients = new ArrayList<>();
+        //stockIngredients.add(salt);
+        stockIngredients.add(egg);
+        stockIngredients.add(bacon);
+        stockIngredients.add(water);
+        stockIngredients.add(milk);
 
-        List<Ingredient> listRecipeIngredients = new ArrayList<>();
-        listRecipeIngredients.add(salt);
-        listRecipeIngredients.add(egg);
-        listRecipeIngredients.add(bacon);
+        List<Ingredient> recipeIngredients = new ArrayList<>();
+        recipeIngredients.add(salt);
+        recipeIngredients.add(egg);
+        recipeIngredients.add(bacon);
 
-        Recipe omelette = new Recipe("Omelette", listRecipeIngredients);
+        Recipe omelette = new Recipe("Omelette", recipeIngredients);
 
-        omelette.make(listRecipeIngredients, listStockIngredients);
+        omelette.make(recipeIngredients, stockIngredients);
     }
 }

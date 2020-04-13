@@ -19,24 +19,24 @@ public class Recipe {
         return name;
     }
 
-    public static void make(List<Ingredient> listRecipeIngredients, @NotNull List<Ingredient> listStockIngredients) {
+    public static void make(List<Ingredient> recipeIngredients, @NotNull List<Ingredient> stockIngredients) {
         String name = getName();
-        if (listStockIngredients.containsAll(listRecipeIngredients)) {
+        if (stockIngredients.containsAll(recipeIngredients)) {
             System.out.println(name + " is ready.");
         } else {
             System.out.println("Cannot prepare " + name.toLowerCase() + " due to missing ingredient(s): ");
-            getMissingIngredient(listRecipeIngredients, listStockIngredients);
+            getMissingIngredient(recipeIngredients, stockIngredients);
         }
     }
 
-    public static void getMissingIngredient(@NotNull List<Ingredient> listRecipeIngredients,
-                                            @NotNull List<Ingredient> listStockIngredients) {
+    public static void getMissingIngredient(@NotNull List<Ingredient> recipeIngredients,
+                                            @NotNull List<Ingredient> stockIngredients) {
 
-        HashSet<Ingredient> availableIngredients = new HashSet<>(listStockIngredients);
-        availableIngredients.addAll(listStockIngredients);
-        for (int i = 0; i < listRecipeIngredients.size(); i++) {
-            if (!availableIngredients.contains(listRecipeIngredients.get(i))) {
-                System.out.print(listRecipeIngredients.get(i));
+        HashSet<Ingredient> availableIngredients = new HashSet<>(stockIngredients);
+        availableIngredients.addAll(stockIngredients);
+        for (int i = 0; i < recipeIngredients.size(); i++) {
+            if (!availableIngredients.contains(recipeIngredients.get(i))) {
+                System.out.print(recipeIngredients.get(i));
             }
         }
     }
